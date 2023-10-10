@@ -1,47 +1,60 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import SideBar from "./lib/SideBar.svelte";
+  import { Search } from "lucide-svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <header>
+    <h2 style="margin-left: 10px;">Quartz</h2>
+    <nav>
+      <input type="text" name="" id="" placeholder="Search" /><img
+        src="../src/assets/search.svg"
+        alt=""
+        class="search-icon"
+      />
+    </nav>
+  </header>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+
+  main header .search-icon {
+    position: absolute;
+    left: 640px;
+    bottom: 20;
+    fill: black;
+    pointer-events: none;
   }
-  .read-the-docs {
-    color: #888;
+  main header input[type="text"] {
+    width: 260px;
+    padding: 3px 0 0 10px;
+    outline: none;
+
+    padding-right: 30px;
+    border: none;
+    display: flex;
+  }
+  main header nav input[type="text"]::placeholder {
+    color: black;
+    font-weight: 800;
+  }
+  main header nav {
+    display: flex;
+    margin-right: 450px;
+  }
+  @media only screen and (max-width: 1024px) {
+    main header nav {
+      margin-right: 140px;
+    }
   }
 </style>
