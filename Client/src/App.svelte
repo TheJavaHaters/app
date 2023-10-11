@@ -1,19 +1,18 @@
 <script>
   import SideBar from "./lib/SideBar.svelte";
   import { Search } from "lucide-svelte";
+  import Container from "./lib/Container.svelte";
 </script>
 
 <main>
   <header>
     <h2 style="margin-left: 10px;">Quartz</h2>
     <nav>
-      <input type="text" name="" id="" placeholder="Search" /><img
-        src="../src/assets/search.svg"
-        alt=""
-        class="search-icon"
-      />
+      <img src="../src/assets/search.svg" alt="" class="search-icon" />
+      <input type="text" name="" id="" placeholder="Search" />
     </nav>
   </header>
+  <Container />
 </main>
 
 <style>
@@ -29,20 +28,23 @@
   }
 
   main header .search-icon {
-    position: absolute;
+    /* position: absolute;
     left: 640px;
-    bottom: 20;
+    bottom: 20; */
     fill: black;
     pointer-events: none;
+    margin-left: 15px;
+    position: relative;
+    left: 30px;
   }
   main header input[type="text"] {
-    width: 260px;
+    width: 270px;
     padding: 3px 0 0 10px;
     outline: none;
-
     padding-right: 30px;
-    border: none;
+    border: 1px solid black;
     display: flex;
+    margin-left: 40px;
   }
   main header nav input[type="text"]::placeholder {
     color: black;
