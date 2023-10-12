@@ -3,7 +3,7 @@
 
 <main>
   <header>
-    <h2>Quartz</h2>
+    <h2>Quartzx</h2>
     <nav>
       <img src="../src/assets/search.svg" alt="" class="search-icon" />
       <input type="text" name="" id="" placeholder="Search" />
@@ -16,7 +16,7 @@
     border: 1px solid black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 5px;
   }
   header h2 {
