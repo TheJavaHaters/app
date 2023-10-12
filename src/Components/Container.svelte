@@ -1,27 +1,13 @@
 <script>
   import { SelectedPage } from "../Pages/HomeStore";
   import { onMount } from "svelte";
+  import SideBar from "./SideBar.svelte";
   // onMount(() => {
   //   SelectedPage.set("dashboard");
   // });
 </script>
 
-<div class="Container">
-  <div class="row">
-    <div class="item-1">
-      <ul>
-        <li><a href="">Dashboard</a></li>
-        <li><a href="">Cards</a></li>
-        <li><a href="">Payments</a></li>
-        <li><a href="">Statisitcs</a></li>
-        <li><a href="">Transaction</a></li>
-        <li><a href="">Log Out</a></li>
-      </ul>
-    </div>
-    <div class="item-2">Hello word</div>
-    <div class="item-3">helllo world</div>
-  </div>
-</div>
+<SideBar />
 
 <style>
   .Container {
