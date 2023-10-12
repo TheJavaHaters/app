@@ -14,7 +14,7 @@
   });
 </script>
 
-<div>
+<div class="page-holder">
   {#if $SelectedPage == "dashboard"}
     <Dashboard />
   {:else if $SelectedPage == "settings"}
@@ -33,13 +33,8 @@
 </div>
 
 <style>
-  .sub-page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
+  .page-holder {
+    max-height: 80vh;
   }
 
   .Container {

@@ -21,7 +21,7 @@
     max-width: 1200px;
     margin: 0 auto;
     flex-direction: row;
-    padding: 50000px;
+    padding: 5px;
   }
   /*
   main header .search-icon {
