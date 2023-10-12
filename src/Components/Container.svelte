@@ -1,18 +1,52 @@
 <script>
-  import { SelectedPage } from "../Pages/HomeStore";
   import { onMount } from "svelte";
-  import SideBar from "./SideBar.svelte";
-  // onMount(() => {
-  //   SelectedPage.set("dashboard");
-  // });
+  import { SelectedPage } from "../stores/pageStore.js";
+
+  import Cards from "../Pages/cards.svelte";
+  import Dashboard from "../Pages/dashboard.svelte";
+  import Payments from "../Pages/payments.svelte";
+  import Statistics from "../Pages/Statistics.svelte";
+  import Transactions from "../Pages/transactions.svelte";
+  import Settings from "../Pages/settings.svelte";
+
+  onMount(() => {
+    SelectedPage.set("dashboard");
+  });
 </script>
 
-<SideBar />
+<div>
+  {#if $SelectedPage == "dashboard"}
+    <Dashboard />
+  {:else if $SelectedPage == "settings"}
+    <Settings />
+  {:else if $SelectedPage == "cards"}
+    <Cards />
+  {:else if $SelectedPage == "payments"}
+    <Payments />
+  {:else if $SelectedPage == "statistics"}
+    <Statistics />
+  {:else if $SelectedPage == "transactions"}
+    <Transactions />
+  {:else}
+    <Dashboard />
+  {/if}
+</div>
 
 <style>
+  .sub-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+
   .Container {
     max-width: 1200px;
     margin: 30px 12px;
+    display: flex;
+    flex-direction: row;
   }
 
   .item-1 {
@@ -85,5 +119,12 @@
 
   .item-3 {
     width: 400px;
+  }
+  .h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: black;
   }
 </style>

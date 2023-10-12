@@ -4,37 +4,30 @@
 <main>
   <header>
     <h2>Quartzx</h2>
-    <nav>
-      <img src="../src/assets/search.svg" alt="" class="search-icon" />
-      <input type="text" name="" id="" placeholder="Search" />
-    </nav>
   </header>
 </main>
 
 <style>
-  header {
-    border: 1px solid black;
+  main header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 5px;
+    justify-content: flex-start;
   }
-  header h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
+  main header h2 {
+    font-size: 30px;
+    font-weight: 800;
   }
   main {
     max-width: 1200px;
     margin: 0 auto;
     flex-direction: row;
-    border: 1px solid black;
+    padding: 50000px;
   }
-
+  /*
   main header .search-icon {
-    /* position: absolute;
-      left: 640px;
-      bottom: 20; */
+    position: absolute;
+    left: 640px;
+    bottom: 20;
     fill: black;
     pointer-events: none;
     margin-left: 15px;
@@ -63,5 +56,5 @@
     main header nav {
       margin-right: 140px;
     }
-  }
+  }*/
 </style>
