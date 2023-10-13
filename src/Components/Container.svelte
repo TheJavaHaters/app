@@ -8,6 +8,7 @@
   import Statistics from "../Pages/Statistics.svelte";
   import Transactions from "../Pages/transactions.svelte";
   import Settings from "../Pages/settings.svelte";
+  import Account from "../Pages/Account.svelte";
 
   onMount(() => {
     SelectedPage.set("dashboard");
@@ -27,6 +28,8 @@
     <Statistics />
   {:else if $SelectedPage == "transactions"}
     <Transactions />
+  {:else if $SelectedPage == "account"}
+    <Account />
   {:else}
     <Dashboard />
   {/if}

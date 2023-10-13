@@ -1,10 +1,15 @@
 <script>
+  import { SelectedPage } from "../stores/pageStore.js";
+
+  function openAccounts() {
+    SelectedPage.set("account");
+  }
 </script>
 
 <main>
   <header>
     <h2>Quartzx</h2>
-    <button class="accounts-button">
+    <button class="accounts-button" on:click={openAccounts}>
       <img src="/assets/icons/light/account.svg" alt="accounts icon" />
     </button>
   </header>
