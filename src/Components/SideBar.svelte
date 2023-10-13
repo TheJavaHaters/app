@@ -74,7 +74,7 @@
     cursor: pointer;
     transition: background-color 0.1s ease, transform 0.1s ease;
     text-align: left;
-    position: relative; /* Added to contain the button properly */
+    position: relative;
   }
 
   .menu-item:hover {
