@@ -120,15 +120,15 @@
 
   button {
     padding: 8px 20px; /* Increased padding */
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #d5d5d5;
     color: #fff;
     cursor: pointer;
     font-size: 16px; /* Increased font size */
   }
 
   button:hover {
-    background-color: #0056b3;
+    background-color: #c8c8c8;
   }
 </style>
