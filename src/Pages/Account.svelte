@@ -93,7 +93,7 @@
   }
 
   .button-right {
-    flex: auto;
+    width: 25%;
   }
   .account-header {
     display: flex;

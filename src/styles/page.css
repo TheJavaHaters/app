@@ -29,7 +29,7 @@
     max-height: 240px;
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap:20px;
     justify-content: center;
     align-items: center;
   }
@@ -39,14 +39,22 @@
     color:black;
     border:1px solid black;
     position: relative;
-    height:200px;
+    height:220px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding:10px;
   }
 
   .Income-card{ 
     background-color: rgba(0, 255, 174, 0.139);
     
   }
-  .Exp-card{background-color: rgba(250, 235, 215, 0.375);}
+  .Expense-card{background-color: rgba(250, 235, 215, 0.375);}
+  
 
+  .Balance-card{
+    background-color: beige;
+  }
   /*im working on the dashboard page Nice*/
   /*Wrote this 
