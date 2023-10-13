@@ -21,7 +21,7 @@
 <div class="sidebar">
   {#each icons as icon}
     <div
-      class="menu-item"
+      class={"menu-item" + (icon == $SelectedPage ? " active" : "")}
       on:click={() => setPage(icon)}
       on:keydown={() => {}}
       role="button"
@@ -33,7 +33,7 @@
         class="icon"
       />
 
-      <span class="label"
+      <span class={"label" + $SelectedPage == icon ? " active" : ""}
         >{icon.charAt(0).toUpperCase() + icon.slice(1, icon.length)}</span
       >
     </div>
@@ -41,24 +41,9 @@
 </div>
 
 <style>
-  .menu-item button {
-    background-color: transparent;
-    border: none;
-    width: 100%; /* Fill the full width of the parent div */
-    height: 100%; /* Fill the full height of the parent div */
-    border: 1px solid black;
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    position: relative;
-    cursor: pointer;
-    padding: 20px; /* Remove padding to make it fill the div */
-    margin: 0; /* Remove margin */
-  }
-
   .sidebar {
     width: 250px;
-    background-color: #f5f5f5;
+    background-color: #fff;
     border-radius: 20px;
     height: 100vh;
     padding: 20px;
@@ -77,9 +62,15 @@
     position: relative; /* Added to contain the button properly */
   }
 
-  .menu-item:hover {
-    background-color: #e0e0e0;
+  .menu-item.active {
+    background-color: #000;
     transform: scale(1.1, 1.1);
+  }
+
+  .menu-item:hover {
+    background-color: #000;
+    transform: scale(1.1, 1.1);
+    color: white;
   }
 
   .icon {
@@ -91,5 +82,13 @@
   .label {
     font-size: 16px;
     font-weight: 500;
+  }
+
+  .label.active {
+    color: white;
+  }
+
+  .label:hover {
+    color: white;
   }
 </style>
