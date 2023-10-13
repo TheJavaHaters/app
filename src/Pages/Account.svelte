@@ -1,10 +1,5 @@
 <script>
   import "../styles/page.css";
-  import { SelectedPage } from "../stores/pageStore.js";
-
-  function openCards() {
-    SelectedPage.set("cards");
-  }
 
   let user = {
     firstName: "John",
@@ -56,16 +51,32 @@
 
   <div class="bank-section">
     {#each user.accounts as account}
-      <div class="bank-item">
-        <h3>{account.name} Account</h3>
-        <p>
-          <span class="detail-label">Account Number:</span>
-          {account.accountNumber}
-        </p>
-        <p><span class="detail-label">Sort Code:</span> {account.sortCode}</p>
-        <p><span class="detail-label">Balance:</span> ${account.balance}</p>
-        <p><span class="detail-label">Interest:</span> {account.interest}%</p>
-        <button on:click={openCards}>Go to card</button>
+      <div class="bank-section">
+        {#each user.accounts as account}
+          <div class="bank-item">
+            <div class="bank-details">
+              <h3>{account.name} Account</h3>
+              <p>
+                <span class="detail-label">Account Number:</span>
+                {account.accountNumber}
+              </p>
+              <p>
+                <span class="detail-label">Sort Code:</span>
+                {account.sortCode}
+              </p>
+              <p>
+                <span class="detail-label">Balance:</span> ${account.balance}
+              </p>
+              <p>
+                <span class="detail-label">Interest:</span>
+                {account.interest}%
+              </p>
+            </div>
+            <button class="button-right" on:click={() => {}}
+              >Account Info</button
+            >
+          </div>
+        {/each}
       </div>
     {/each}
   </div>
@@ -74,13 +85,16 @@
 <style>
   .account-page {
     max-width: 80%; /* Using viewport percentage width */
-    margin: 40px auto;
+    margin: 20px auto;
     background-color: #fff;
     padding: 40px; /* Increased padding */
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   }
 
+  .button-right {
+    flex: auto;
+  }
   .account-header {
     display: flex;
     justify-content: space-between;
@@ -118,17 +132,29 @@
     font-size: 18px; /* Increased font size */
   }
 
+  .bank-item {
+    padding: 15px 0; /* Increased padding for each item */
+    border-bottom: 2px solid #eaeaea; /* Increased border width */
+    display: flex; /* Using flex for the layout */
+    justify-content: space-between; /* To space items between left and right */
+    align-items: center; /* To vertically align content */
+  }
+
+  .bank-details {
+    flex: 1; /* Taking full available width minus button */
+  }
+
   button {
     padding: 8px 20px; /* Increased padding */
     border-radius: 10px;
     border: none;
-    background-color: #d5d5d5;
+    background-color: #000000;
     color: #fff;
     cursor: pointer;
     font-size: 16px; /* Increased font size */
   }
 
   button:hover {
-    background-color: #c8c8c8;
+    background-color: #000000;
   }
 </style>

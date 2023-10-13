@@ -43,7 +43,7 @@
 <style>
   .sidebar {
     width: 250px;
-    background-color: #dcdcdc;
+    background-color: #efefef;
     border-radius: 20px;
     height: 100vh;
     padding: 20px;
