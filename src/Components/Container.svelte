@@ -38,6 +38,7 @@
 <style>
   .page-holder {
     max-height: 80vh;
+    min-width: 80%;
   }
 
   .Container {
