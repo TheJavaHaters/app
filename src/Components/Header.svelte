@@ -4,6 +4,9 @@
 <main>
   <header>
     <h2>Quartzx</h2>
+    <button class="accounts-button">
+      <img src="src/assets/account.svg" alt="accounts icon" />
+    </button>
   </header>
 </main>
 
@@ -11,11 +14,31 @@
   main header {
     display: flex;
     padding: 5px;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
   }
   main header h2 {
     font-size: 30px;
     font-weight: 800;
+  }
+  .accounts-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    transition: transform 0.1s ease;
+  }
+  .accounts-button img {
+    width: 100%;
+    height: 100%;
+    
+  }
+  .accounts-button:hover {
+    transform: scale(1.1);
   }
   main {
     max-width: 1200px;
