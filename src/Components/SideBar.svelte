@@ -33,7 +33,7 @@
         class="icon"
       />
 
-      <span class={"label" + $SelectedPage == icon ? " active" : ""}
+      <span class={"label" + $SelectedPage == icon ? "active" : ""}
         >{icon.charAt(0).toUpperCase() + icon.slice(1, icon.length)}</span
       >
     </div>
@@ -43,7 +43,7 @@
 <style>
   .sidebar {
     width: 250px;
-    background-color: #fff;
+    background-color: #dcdcdc;
     border-radius: 20px;
     height: 100vh;
     padding: 20px;
@@ -57,19 +57,26 @@
     margin: 10px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.1s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
     text-align: left;
     position: relative;
   }
 
   .menu-item.active {
-    background-color: #000;
+    background-color: #282b30;
     transform: scale(1.1, 1.1);
   }
 
+  .menu-item.active > span {
+    color: white;
+  }
+
   .menu-item:hover {
-    background-color: #000;
+    background-color: #282b30;
     transform: scale(1.1, 1.1);
+  }
+
+  .menu-item:hover > span {
     color: white;
   }
 

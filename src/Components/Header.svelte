@@ -5,7 +5,7 @@
   <header>
     <h2>Quartzx</h2>
     <button class="accounts-button">
-      <img src="src/assets/account.svg" alt="accounts icon" />
+      <img src="/assets/icons/light/account.svg" alt="accounts icon" />
     </button>
   </header>
 </main>
@@ -27,15 +27,14 @@
     right: 10px;
     border-radius: 50%;
     overflow: hidden;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     transition: transform 0.1s ease;
   }
   .accounts-button img {
     width: 100%;
     height: 100%;
-    
   }
   .accounts-button:hover {
     transform: scale(1.1);
