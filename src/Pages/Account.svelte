@@ -49,8 +49,8 @@
     </div>
   </div>
 
-  <div class="bank-section">
-    {#each user.accounts as account}
+  <!-- <div class="bank-section">
+    {#each user.accounts as account} -->
       <div class="bank-section">
         {#each user.accounts as account}
           <div class="bank-item">
@@ -78,8 +78,8 @@
           </div>
         {/each}
       </div>
-    {/each}
-  </div>
+    <!-- {/each}
+  </div> -->
 </div>
 
 <style>
